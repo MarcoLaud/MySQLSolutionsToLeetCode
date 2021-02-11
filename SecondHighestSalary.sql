@@ -17,5 +17,16 @@ For example, given the above Employee table, the query should return 200 as the 
 +---------------------+
 */
 
+/*---------------------------------*/
+
 SELECT MAX(Salary) AS SecondHighestSalary FROM Employee
 WHERE Salary < (SELECT MAX(Salary) FROM Employee)
+
+/*---------------------------------*/
+
+
+/*Create table If Not Exists Employee (Id int, Salary int)
+Truncate table Employee
+insert into Employee (Id, Salary) values ('1', '100')
+insert into Employee (Id, Salary) values ('2', '200')
+insert into Employee (Id, Salary) values ('3', '300')*/
